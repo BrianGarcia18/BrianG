@@ -6,7 +6,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url(/1-Pagina\ Web/img/FONDO.jpg)no-repeat center;
+    background: url(/Main/img/FONDO.jpg) no-repeat center;
     background-size: cover;
     text-transform: uppercase;
     color: #fff;

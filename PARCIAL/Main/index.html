@@ -12,33 +12,33 @@
 <body>
     <div class="head">
         <div class="logo">
-            <img src="/Main/img/LOGO.png" alt="">
+            <img src="/Main/img/LOGO.png" alt="XGamers Logo">
         </div>
-    
-    <nav class="navbar">
-        <a data-target=".header">Inicio</a>
-        <a data-target=".about">Nosotros</a>
-        <a data-target=".contact">Contacto</a>
-        <a data-target=".sau">Productos</a>
-    </nav>
+
+        <nav class="navbar">
+            <a data-target="#header">Inicio</a>
+            <a data-target="#about">Nosotros</a>
+            <a data-target="#contact">Contacto</a>
+            <a data-target="#sau">Productos</a>
+            <a data-target="#cart" id="cart-link">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cart-count">0</span>
+            </a>
+        </nav>
     </div>
+
     <header class="content header" id="header">
         <h2 class="title">Inicio</h2>
-        <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium ex maxime at exercitationem 
-            officiis provident ab deleniti harum, aliquid itaque eligendi quam a debitis suscipit reprehenderit nihil earum odit alias.
-        </p>
-
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium ex maxime at exercitationem.</p>
         <div class="btn-home">
-            <a href="#" class="btn">Saber mas</a>
-            <a href="#" class="btn">Saber mas</a>
+            <a href="#" class="btn">Saber más</a>
+            <a href="#" class="btn">Saber más</a>
         </div>
     </header>
 
     <section class="content sau" id="sau">
         <h2 class="title">Productos</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus odit architecto minus mollitia temporibus ex eveniet
-        debitis nulla magni quidem veritatis magnam, quos, expedita, perferendis eligendi est qui dignissimos ut.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus odit architecto minus mollitia.</p>
 
         <div class="box-container" id="Volver">
             <div class="box">
@@ -63,32 +63,51 @@
         <article class="container">
             <div class="product" id="product1">
                 <h2>Redragon K587</h2>
-                <p> PRO MAGIC-WAND TKL.</p>
-                <img class="imagen" src="/Productos/imagenes/compragamer_Imganen_general_21329_Teclado_Optico_Redragon_K587_PRO_MAGIC-WAND_TKL_838e2858-grn.jpg" alt="">
-                <a href="/Productos/product-details.html?product=1" class="btn">Saber más</a>
+                <p>PRO MAGIC-WAND TKL.</p>
+                <p>Precio: $85.50</p>
+                <img class="imagen" src="/Productos/imagenes/compragamer_Imganen_general_21329_Teclado_Optico_Redragon_K587_PRO_MAGIC-WAND_TKL_838e2858-grn.jpg" alt="Redragon K587">
+                <div class="button-container">
+                    <a href="/Productos/product-details.html?product=1" class="btn">Saber más</a>
+                    <button class="btn" onclick="addToCart('Redragon K587', 'PRO MAGIC-WAND TKL', 85.50)">
+                        <i class="fas fa-shopping-cart"></i>
+                    </button>
+                </div>
             </div>
             <div class="product" id="product2">
                 <h2>Redragon VATA K580 RGB</h2>
                 <p>PRO RGB Switch Brown ESP</p>
-                <img class="imagen" src="/Productos/imagenes/compragamer_Imganen_general_21949_Teclado_Mecanico_Redragon_VATA_K580_RGB_PRO_RGB_Switch_Brown_ESP_b7bd3a3b-grn.jpg" alt="">
-                <a href="/Productos/product-details.html?product=2" class="btn">Saber más</a>
+                <p>Precio: $132.88</p>
+                <img class="imagen" src="/Productos/imagenes/compragamer_Imganen_general_21949_Teclado_Mecanico_Redragon_VATA_K580_RGB_PRO_RGB_Switch_Brown_ESP_b7bd3a3b-grn.jpg" alt="Redragon VATA K580 RGB">
+                <div class="button-container">
+                    <a href="/Productos/product-details.html?product=2" class="btn">Saber más</a>
+                    <button class="btn" onclick="addToCart('Redragon VATA K580 RGB', 'PRO RGB Switch Brown ESP', 132.88)">
+                        <i class="fas fa-shopping-cart"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="btn-container">
+                <button class="btn" onclick="window.location.href='http://localhost/Parcial/consulta.php';">VER LISTA DE TECLADOS</button>
             </div>
         </article>
     </section>
 
+    <section class="content cart" id="cart">
+        <h2 class="title">Carrito de compras</h2>
+        <ul id="cart-items"></ul>
+        <p id="cart-total">Total: $0</p>
+        <button class="btn" id="checkout-btn">Finalizar compra</button>
+    </section>
+
     <section class="content about" id="about">
         <h2 class="title">Nosotros</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores magnam deserunt reiciendis ipsa enim!
-        Dolore laboriosam architecto voluptatem quos provident corporis, laudantium quia fugit ex iste recusandae velit veniam beatae.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores magnam deserunt reiciendis ipsa enim!
-        Dolore laboriosam architecto voluptatem quos provident corporis, laudantium quia fugit ex iste recusandae velit veniam beatae.</p>
-        <a href="#" class="btn">Saber mas</a>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores magnam deserunt reiciendis.</p>
+        <a href="#" class="btn">Saber más</a>
     </section>
 
     <section class="content contact-info" id="contact">
         <h2 class="title">Contacto</h2>
         <div class="contact-details">
-            <img class="Whatsapp" src="/Main/img/Whatsapp Logo.png" alt="Logo">
+            <img class="Whatsapp" src="/Main/img/Whatsapp Logo.png" alt="Whatsapp Logo">
             <p>+64 56465 464646</p>
         </div>
         <figure class="map">
