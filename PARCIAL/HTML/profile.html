@@ -9,35 +9,48 @@
 </head>
 <body>
 
+    <!-- Contenedor del perfil de usuario -->
     <div class="profile-container">
         <h2>Editar Perfil</h2>
+        
+        <!-- Formulario para editar el perfil -->
         <form id="profile-form">
+            
+            <!-- Campo para el nombre -->
             <label for="name">Nombre:</label>
             <input type="text" id="name" name="name" required>
 
+            <!-- Campo para el apellido -->
             <label for="lastname">Apellido:</label>
             <input type="text" id="lastname" name="lastname" required>
 
+            <!-- Campo de correo electrónico (solo lectura) -->
             <label for="email">Correo Electrónico:</label>
             <input type="email" id="email" name="email" readonly>
 
+            <!-- Campo para la fecha de nacimiento -->
             <label for="dob">Fecha de Nacimiento:</label>
             <input type="date" id="dob" name="dob" required>
             
+            <!-- Campo para el número de teléfono con validación -->
             <label for="phone">Número de Teléfono:</label>
             <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="Ejemplo: 1234567890" required>
 
+            <!-- Campo para la dirección -->
             <label for="address">Dirección:</label>
             <input type="text" id="address" name="address" required>
 
+            <!-- Campo para la contraseña con botón de visibilidad -->
             <label for="password">Contraseña:</label>
             <input type="password" id="password" name="password">
             <span id="togglePassword">👁️</span>
 
+            <!-- Botón para guardar los cambios -->
             <button type="button" id="save-profile-btn">Guardar Cambios</button>
         </form>
     </div>
 
+    <!-- Script para manejar la lógica del perfil -->
     <script src="/CSS + JS/profile.js"></script>
 </body>
 </html>

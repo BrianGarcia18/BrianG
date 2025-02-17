@@ -8,39 +8,51 @@
     <link rel="shortcut icon" href="/img/LOGO.png" type="image/x-icon">
 </head>
 <body>
+    <!-- Contenedor principal del formulario de registro -->
     <div class="form-container">
         <img src="/img/LOGO.png" alt="LOGO">
         <h2>Formulario de Registro</h2>
-    <form id="registrationForm" action="/HTML/index.html" method="get" onsubmit="return validarFormulario()">
+        
+        <!-- Formulario de registro -->
+        <form id="registrationForm" action="/HTML/index.html" method="get" onsubmit="return validarFormulario()">
             <div class="form-group">
                 
+                <!-- Campo para el correo electrónico -->
                 <label class="label">
                     <input type="email" class="input" id="email" name="email" placeholder=" " required>
                     <span class="label_name">Ingresa tu correo electrónico</span>
                 </label>
 
+                <!-- Campo para la fecha de nacimiento -->
                 <label class="label">
                     <input type="date" class="input" id="dob" name="dob" placeholder=" " required>
                     <span class="label_name">Ingresa tu fecha de nacimiento</span>
                 </label>
                 
+                <!-- Campo para la contraseña con botón de visibilidad -->
                 <label class="label password-container">
                     <input type="password" class="input" id="password" name="password" placeholder=" " required>
                     <span class="label_name">Ingresa tu contraseña</span>
                     <button type="button" id="togglePassword" class="toggle-password">👁️</button>
                 </label>
 
+                <!-- Campo para confirmar la contraseña con botón de visibilidad -->
                 <label class="label password-container">
                     <input type="password" class="input" id="confirmPassword" name="confirmPassword" placeholder=" " required>
                     <span class="label_name">Confirma tu contraseña</span>
                     <button type="button" id="toggleConfirmPassword" class="toggle-password">👁️</button>
                 </label>
             </div>
+            
+            <!-- Botón de envío del formulario -->
             <input type="submit" value="Registrarse">
+            
+            <!-- Contenedor para mensajes de error -->
             <div id="errorMessage"></div>
         </form>
     </div>
 
+    <!-- Script de validación del formulario -->
     <script defer src="/CSS + JS/login.js"></script>
 </body>
 </html>
