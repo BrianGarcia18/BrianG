@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REGISTRO</title>
+    <link rel="stylesheet" href="/CSS + JS/login.css">
+    <link rel="shortcut icon" href="/img/LOGO.png" type="image/x-icon">
+</head>
+<body>
+    <div class="form-container">
+        <img src="/img/LOGO.png" alt="LOGO">
+        <h2>Formulario de Registro</h2>
+    <form id="registrationForm" action="/HTML/index.html" method="get" onsubmit="return validarFormulario()">
+            <div class="form-group">
+                
+                <label class="label">
+                    <input type="email" class="input" id="email" name="email" placeholder=" " required>
+                    <span class="label_name">Ingresa tu correo electrónico</span>
+                </label>
+
+                <label class="label">
+                    <input type="date" class="input" id="dob" name="dob" placeholder=" " required>
+                    <span class="label_name">Ingresa tu fecha de nacimiento</span>
+                </label>
+                
+                <label class="label password-container">
+                    <input type="password" class="input" id="password" name="password" placeholder=" " required>
+                    <span class="label_name">Ingresa tu contraseña</span>
+                    <button type="button" id="togglePassword" class="toggle-password">👁️</button>
+                </label>
+
+                <label class="label password-container">
+                    <input type="password" class="input" id="confirmPassword" name="confirmPassword" placeholder=" " required>
+                    <span class="label_name">Confirma tu contraseña</span>
+                    <button type="button" id="toggleConfirmPassword" class="toggle-password">👁️</button>
+                </label>
+            </div>
+            <input type="submit" value="Registrarse">
+            <div id="errorMessage"></div>
+        </form>
+    </div>
+
+    <script defer src="/CSS + JS/login.js"></script>
+</body>
+</html>

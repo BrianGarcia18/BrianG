@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(/img/FONDO.jpg) no-repeat center;
+    background-size: cover;
+    text-transform: uppercase;
+    color: #fff;
+    
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    background: #171717;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid #9c27b0;
+}
+
+h1{
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.product {
+    margin: 20px 0;
+}
+
+#image{
+    border: 5px solid #9c27b0;
+    border-radius: 10px;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 40px;
+    border: 2px solid #9c27b0;
+    color: #fff;
+    text-decoration: none;
+    background: #9c27b0;
+}
+
+.button:hover {
+    background: none;
+}

@@ -1,0 +1,105 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.form-container {
+    background-color: #171717;
+    padding: 30px;
+    border: 3px solid #9001c0;
+    border-radius: 8px;;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+}
+
+img {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+    border: 3px solid #9001c0;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.label {
+    position: relative;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: transparent;
+    outline: none;
+    font-size: 16px;
+}
+
+.label_name {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.3s;
+    font-size: 14px;
+    color: #aaa;
+    pointer-events: none;
+}
+
+.input:focus + .label_name,
+.input:not(:placeholder-shown) + .label_name {
+    top: 0;
+    font-size: 12px;
+    color: #333;
+}
+
+.password-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.toggle-password {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    position: absolute;
+    right: 10px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #9001c0;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #218838;
+}
+
+#errorMessage {
+    color: red;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
